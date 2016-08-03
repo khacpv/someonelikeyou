@@ -24,4 +24,7 @@ dependencies {
   testCompile 'junit:junit:4.12'
   compile 'com.android.support:appcompat-v7:24.1.1'
   compile files('libs/facepp_without_source_code.jar')
+  compile project(path: ':faceppsdk')
+  compile files('lib/faceapi.jar')
+  compile files('lib/faceppsdk_v2.jar')
 }
