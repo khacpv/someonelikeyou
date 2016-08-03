@@ -1,9 +1,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/image"/>
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -11,16 +19,36 @@
         android:padding="@dimen/padding_medium"
         android:text="@string/hello_world"
         tools:context=".MainActivity"
-        android:id="@+id/textView"
         />
+
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Face detection"
-        android:id="@+id/button"
-        android:onClick="faceDetection"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
+        android:onClick="faceDetection"
+        android:text="Face detection"
+        />
+
+    <Button
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:onClick="takePicture"
+        android:text="Take Picture"
+        />
+
+    <Button
+        android:id="@+id/offline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/camera"
+        android:layout_centerHorizontal="true"
+        android:onClick="uploadFile"
+        android:text="Upload offline"
         />
 
 </RelativeLayout>
